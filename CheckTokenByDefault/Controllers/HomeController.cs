@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CheckTokenByDefault.Models;
 using System.Web.Mvc;
 
 namespace CheckTokenByDefault.Controllers
@@ -24,6 +21,19 @@ namespace CheckTokenByDefault.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Test()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Test(TestViewModel model)
+        {
             return View();
         }
     }
