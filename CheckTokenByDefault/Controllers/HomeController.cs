@@ -31,7 +31,6 @@ namespace CheckTokenByDefault.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Test(TestViewModel model)
         {
             return View();
